@@ -1,0 +1,8 @@
+.HeaderRightItems {
+  display: flex;
+}
+
+.HeaderRightItem {
+  display: flex;
+  margin-right: 40px;
+}
