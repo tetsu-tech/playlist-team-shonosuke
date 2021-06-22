@@ -1,3 +1,8 @@
+# 参考にした記事
+[https://qiita.com/sunnyG/items/05c2e9381d6ba2d9fccf](https://qiita.com/sunnyG/items/05c2e9381d6ba2d9fccf)
+正直、正しくできているのかわからん。
+huskyは入れるとややこしくなってしまったため、一旦弾いた。多分入れる場所が悪かったが、gitファイルのある回送と違くなるのが不安なので放置。
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
