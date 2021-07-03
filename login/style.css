@@ -1,0 +1,104 @@
+.input {
+  display: grid;
+  height: 50vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto auto auto auto;
+}
+
+.input .title {
+  grid-column: 2 / -2;
+  grid-row: 1;
+  text-align: center;
+  border: 5px solid #f5a70f;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+}
+
+.input .large_background {
+  grid-column: 2 / -2;
+  grid-row: 2 / span 6;
+  background: rgba(230, 230, 230, 0.92);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto auto auto auto;
+  gap: 24px;
+}
+
+.large_background .login_info_input {
+  grid-column: 1 / span 12;
+  grid-row: 2 / span 3;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.login_info_input .id_input {
+  grid-column: 2 / span 10;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+}
+
+.id_input .id_tag {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  text-align: center;
+  background-color: #51a351;
+  display: grid;
+  place-items: center;
+}
+
+.id_input .id_text {
+  grid-column: 5 / span 8;
+  grid-row: 2;
+  text-align: center;
+}
+
+.login_info_input .pass_input {
+  grid-column: 2 / span 10;
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+}
+
+.pass_input .pass_tag {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  text-align: center;
+  background-color: #51a351;
+  display: grid;
+  place-items: center;
+}
+
+.pass_input .pass_text {
+  grid-column: 5 / span 8;
+  grid-row: 2;
+  text-align: center;
+}
+
+.large_background .button_frame {
+  grid-column: 4 / span 6;
+  grid-row: 5;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.button_frame .button {
+  grid-column: 1/-1;
+  grid-row: 6;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: bold;
+  color: white;
+  background-color: #51a351;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: transparent;
+}
