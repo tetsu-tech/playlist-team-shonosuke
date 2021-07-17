@@ -1,17 +1,14 @@
 // import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { NotFound } from "./components/NotFound";
+import "./App.css";
+import { BrowserRouter, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          This is header compornent
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <h1>Hello React Router</h1>
+      <Link to="/404" component={NotFound} />
+    </BrowserRouter>
   );
 }
 
