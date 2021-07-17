@@ -7,7 +7,9 @@ function App() {
   return (
     <BrowserRouter>
       <h1>Hello React Router</h1>
-      <Link to="/404" component={NotFound} />
+      <Link to="/404" component={NotFound}>
+        NotFoud Page
+      </Link>
     </BrowserRouter>
   );
 }
