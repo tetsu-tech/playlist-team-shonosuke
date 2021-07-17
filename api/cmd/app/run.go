@@ -3,11 +3,13 @@ package app
 import (
 	"log"
 	"net/http"
+	"strconv"
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 
 	"github.com/tetsu-tech/playlist-team-shonosuke/infra"
+	"github.com/tetsu-tech/playlist-team-shonosuke/models"
 	"github.com/tetsu-tech/playlist-team-shonosuke/project/config"
 )
 
@@ -39,10 +41,40 @@ func Run() {
 	}
 }
 
+type User struct {
+	ID          int    `json:"id"`
+	FirebaseUID string `json:"firebase_uid`
+}
+
 func initRouters() {
 	router.GET("/health", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "hello",
 		})
+	})
+	router.GET("/konnichitarou", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "hogehoge",
+		})
+	})
+	router.GET("/users", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "hogehoge",
+		})
+	})
+	router.GET("/users/:id", func(c *gin.Context) {
+		idStr := c.Param("id")
+		id, err := strconv.Atoi(idStr)
+		if err != nil {
+			log.Println(err)
+		}
+		log.Println(id)
+		user, err := models.Users(
+			models.UserWhere.ID.EQ(id),
+		).One(c, infra.DB)
+		if err != nil {
+			log.Println(err)
+		}
+		c.JSON(http.StatusOK, user)
 	})
 }
